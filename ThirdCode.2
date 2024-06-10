@@ -1,0 +1,24 @@
+from datetime import datetime
+
+def calculate_age(birth_year):
+    current_year = datetime.now().year
+    age = current_year - birth_year
+    return age
+
+def check_retirement_status(name, birth_year):
+    age = calculate_age(birth_year)
+    retirement_age = 65
+
+    if age >= retirement_age:
+        print("Emekli oldunuz.")
+    else:
+        years_left = retirement_age - age
+        print(f"{name} emekliliğine {years_left} yıl kaldı.")
+
+try:
+    name = input("Lütfen isminizi giriniz: ")
+    birth_year = int(input("Lütfen doğum yılınızı giriniz: "))
+    check_retirement_status(name, birth_year)
+
+except ValueError:
+    print("Lütfen geçerli bir yıl giriniz.")
