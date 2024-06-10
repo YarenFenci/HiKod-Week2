@@ -1,0 +1,14 @@
+def calculate_circle_area(pi,radius):
+    area=pi*(radius**2)
+    return area
+    
+try:
+    pi = float(input("Please enter the value of pi: "))
+    radius = float(input("Please enter the radius of the circle: "))
+    area = calculate_circle_area(pi, radius)
+
+    # Print the result
+    print(f"The area of the circle is: {area}")
+
+except ValueError:
+    print("Please enter valid numerical values for pi and radius.")
