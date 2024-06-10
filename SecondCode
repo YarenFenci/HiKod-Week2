@@ -1,0 +1,18 @@
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+# Get user input for the number
+try:
+    number = int(input("Please enter a number to calculate its factorial: "))
+
+    # Calculate the factorial using the factorial function
+    fact = factorial(number)
+
+    # Print the result using the format method
+    print("The factorial of {} is {}".format(number, fact))
+
+except ValueError:
+    print("Please enter a valid integer.")
